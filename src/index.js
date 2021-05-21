@@ -3,6 +3,14 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("/sw.js").then(function () {
+        console.log("Service Worker Registered");
+    });
+} else {
+    console.log("servcieWorker not supported");
+}
+
 ReactDOM.render(
     <React.StrictMode>
         <App />
