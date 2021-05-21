@@ -1,0 +1,13 @@
+.ValidTest {
+    text-align: center;
+}
+
+.valid {
+    color: green;
+    font-size: 4rem;
+}
+
+.invalid {
+    color: red;
+    font-size: 4rem;
+}
