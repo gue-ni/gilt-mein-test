@@ -11,7 +11,7 @@
  limitations under the License.
  */
 
-const PRECACHE = "precache-v1";
+const PRECACHE = "precache-v4";
 const RUNTIME = "runtime";
 
 // A list of local resources we always want to be cached.

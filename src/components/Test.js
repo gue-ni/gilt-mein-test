@@ -40,6 +40,7 @@ function Test() {
     }
 
     function typeInput(event) {
+        window.localStorage.setItem("testType_12345", event.target.value);
         setTestType(tests[event.target.value]);
     }
 
@@ -68,16 +69,12 @@ function Test() {
         return `${year}-${month}-${day}T${hour}:${minute}`;
     }
 
-    let tmpTestDate = null;
-    let stored = window.localStorage.getItem("testDate_12345");
-    if (stored) {
-        tmpTestDate = new Date(stored);
-    } else {
-        tmpTestDate = new Date();
-    }
+    let storedDate = window.localStorage.getItem("testDate_12345");
+    let tmp = storedDate ? new Date(storedDate) : new Date();
+    const [testDate, setTestDate] = useState(tmp);
 
-    const [testDate, setTestDate] = useState(tmpTestDate);
-    const [testType, setTestType] = useState(tests[0]);
+    let storedIndex = window.localStorage.getItem("testType_12345");
+    const [testType, setTestType] = useState(tests[storedIndex || 0]);
 
     return (
         <div className="Test">
@@ -98,11 +95,11 @@ function Test() {
                 </p>
             </div>
 
-            <br></br>
+            <br />
 
             <div>
                 <h3>Was für ein Test war es?</h3>
-                <select id="testType" onChange={(event) => typeInput(event)}>
+                <select id="testType" onChange={(event) => typeInput(event)} defaultValue={storedIndex || 0}>
                     {options}
                 </select>
             </div>

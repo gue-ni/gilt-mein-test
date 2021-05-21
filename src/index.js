@@ -8,7 +8,7 @@ if ("serviceWorker" in navigator) {
         console.log("Service Worker Registered");
     });
 } else {
-    console.log("servcieWorker not supported");
+    console.log("Service Worker not supported");
 }
 
 ReactDOM.render(

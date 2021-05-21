@@ -2,12 +2,16 @@
     text-align: center;
 }
 
+.status {
+    font-size: 4rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 .valid {
     color: green;
-    font-size: 4rem;
 }
 
 .invalid {
     color: red;
-    font-size: 4rem;
 }
