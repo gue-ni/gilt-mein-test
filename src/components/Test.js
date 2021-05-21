@@ -109,7 +109,7 @@ function Test() {
                     <b> {testType.name || "?"} </b> ist gültig für <b>{testType.validFor || "?"}</b> Stunden.
                 </p>
                 <Status
-                    valid={calcHourDiff(new Date(), testDate) <= testType.validFor}
+                    valid={calcHourDiff(new Date(), testDate) <= testType.validFor - 1}
                     validFor={testType.validFor - calcHourDiff(new Date(), testDate)}
                 />
             </div>
