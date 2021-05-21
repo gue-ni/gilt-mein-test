@@ -5,7 +5,7 @@ on:
         paths-ignore:
             - "resources/*"
         branches:
-            - master    
+            - master
     pull_request:
         branches:
             - master
