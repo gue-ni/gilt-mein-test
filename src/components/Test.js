@@ -103,7 +103,6 @@ function Test() {
                     {options}
                 </select>
             </div>
-
             <div>
                 <p>
                     <b> {testType.name || "?"} </b> ist gültig für <b>{testType.validFor || "?"}</b> Stunden.
