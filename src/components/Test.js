@@ -49,7 +49,6 @@ function Test() {
     }
 
     function formatDate(date) {
-        //console.log(date);
         let [month, day, year] = date
             .toLocaleDateString("en-US", {
                 year: "numeric",
