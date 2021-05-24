@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Status from "./Status";
-import "./Test.css";
 
 function Test() {
     const tests = [
@@ -93,8 +92,6 @@ function Test() {
                     <b> {calcHourDiff(new Date(), testDate)} </b> Stunden.
                 </p>
             </div>
-
-            <br />
 
             <div>
                 <h3>Was für ein Test war es?</h3>
