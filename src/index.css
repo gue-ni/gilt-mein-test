@@ -1,29 +1,88 @@
+:root {
+	--background: #f1f1f1;
+	--primary: rgba(85, 172, 238, 1);
+	--primary-active: rgba(85, 172, 238, 0.6);
+	--black: black;
+	--light-grey: #dadce0;
+	--maxwidth: 500px;
+	--helvetica: Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html {
+	overflow-x: hidden;
+}
+
 body {
-    max-width: 650px;
-    margin: 40px auto;
-    padding: 0 10px;
-    font: 18px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
-        sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    color: #444;
+	font-family: var(--helvetica);
+	/*font-weight: 500;*/
+	max-width: var(--maxwidth);
+	margin: 0 auto;
 }
 
-h1,
-h2,
-h3 {
-    line-height: 1.2;
+h1 {
+	text-align: center;
 }
 
-@media (prefers-color-scheme: dark) {
-    body {
-        color: #ccc;
-        background: black;
-    }
+.container {
+	position: relative;
+	min-height: 100vh;
+}
 
-    a:link {
-        color: #5bf;
-    }
+.box {
+	padding: 1em;
+	color: var(--black);
+	border-bottom: 1px solid var(--light-grey);
+	background-color: #fff;
+}
 
-    a:visited {
-        color: #ccf;
-    }
+.footer {
+	text-align: center;
+}
+
+input,
+select {
+	padding: 1em;
+	border: 1px solid var(--light-grey);
+	width: 100%;
+	font-size: 16px;
+	margin: 0.5em 0;
+	border-radius: 1.5em;
+	font-family: var(--helvetica);
+}
+
+button {
+	padding: 1em;
+	border-radius: 1.5em;
+	margin: 1em 0;
+	font-family: var(--helvetica);
+	font-size: medium;
+	background-color: var(--primary);
+	border: none;
+	color: white;
+	width: 100%;
+	text-decoration: none;
+	display: block;
+}
+
+button:active {
+	background-color: var(--primary-active);
+}
+
+@media only screen and (min-width: 500px) {
+	body {
+		border-right: 1px solid var(--light-grey);
+		border-left: 1px solid var(--light-grey);
+	}
 }

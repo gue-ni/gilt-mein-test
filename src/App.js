@@ -1,14 +1,16 @@
-import Test from "./components/Test";
+import Calculator from "./components/Calculator";
 
 function App() {
-    return (
-        <div className="App">
-            <h1>Gilt mein Test noch?</h1>
-            <p>Eine kleine Hilfe für all jene, die sich mit den Eintrittstests in Wien nicht mehr ganz auskennen.</p>
-            <Test />
-            <small>&copy; Jakob Maier 2021</small>
-        </div>
-    );
+	return (
+		<div className="container">
+			<Calculator />
+			<div className="box footer">
+				<small>
+					&copy; 2021 <a href="https://www.jakobmaier.at">Jakob Maier</a>
+				</small>
+			</div>
+		</div>
+	);
 }
 
 export default App;
