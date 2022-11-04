@@ -26,8 +26,9 @@ jobs:
               with:
                   host: ${{ secrets.HOST }}
                   username: ${{ secrets.USERNAME }}
-                  password: ${{ secrets.PASSWORD }}
+                  key: ${{ secrets.KEY }}
                   port: ${{ secrets.PORT }}
                   source: "build/."
-                  target: ${{ secrets.TARGET_DIR }}
+                  rm: true
+                  target: /var/www/project/corona
                   strip_components: 1
